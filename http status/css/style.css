@@ -1,0 +1,54 @@
+* {
+    font-family: "Avenir Next", "Arial";
+    color: white;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+}
+
+hr {
+    margin: 2px;
+}
+
+
+.overlay {
+    padding: 0px;
+    margin: 0px;
+}
+
+.songDisplay {
+    position: absolute;
+    bottom: 45px;
+    bottom: 0px;
+    right: 0px;
+    
+    padding: 0px;
+    margin: 0px;
+}
+
+.hitDisplay {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    
+    padding: 0px;
+    margin: 0px;
+}
+
+.hidden {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.dim {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.shown {
+    opacity: 1;
+    transition: 0.5s;
+}

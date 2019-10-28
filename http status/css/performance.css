@@ -1,0 +1,52 @@
+.performance {
+    float: left;
+
+    padding: 10px;
+    padding-top: 150px;
+    margin: 0px;
+
+    text-align: right;
+}
+.postfix {
+    padding: 0px;
+    margin: 0px;
+    
+    font-size: 60%;
+    font-weight: 400;
+
+    color: lightgray;
+}
+
+.rank {
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 300%;
+    font-weight: 700;
+}
+
+.accuracy {
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 80%;
+    font-weight: 700;
+
+    color: lightgray;
+}
+
+.score {
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 300%;
+    font-weight: 700;
+}
+
+.combo {
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 300%;
+    font-weight: 700;
+}
