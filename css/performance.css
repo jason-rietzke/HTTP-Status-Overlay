@@ -11,8 +11,8 @@
     padding: 0px;
     margin: 0px;
     
-    font-size: 60%;
-    font-weight: 400;
+    font-size: 50%;
+    font-weight: 200;
 
     color: lightgray;
 }
@@ -22,15 +22,15 @@
     margin: 0px;
 
     font-size: 300%;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .accuracy {
     padding: 0px;
     margin: 0px;
 
-    font-size: 80%;
-    font-weight: 700;
+    font-size: 50%;
+    font-weight: 200;
 
     color: lightgray;
 }
@@ -40,7 +40,7 @@
     margin: 0px;
 
     font-size: 300%;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .combo {
@@ -48,5 +48,5 @@
     margin: 0px;
 
     font-size: 300%;
-    font-weight: 700;
+    font-weight: 800;
 }
