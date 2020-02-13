@@ -6,6 +6,7 @@ const beatmap = (() => {
     var mapper = document.getElementById("mapper");
     var difficulty = document.getElementById("difficulty");
     var bpm = document.getElementById("bpm");
+    var njs = document.getElementById("njs");
     
     function format(number) {
         if (Number.isNaN(number)) {
@@ -31,6 +32,7 @@ const beatmap = (() => {
             mapper.innerHTML = data.levelAuthorName;
             difficulty.innerHTML = data.difficulty;
             bpm.innerHTML = `${format(data.songBPM)} BPM`;
+            njs.innerHTML = `${format(data.noteJumpSpeed)} NJS`;
         }
     }
 
@@ -42,6 +44,7 @@ const beatmap = (() => {
         mapper.innerHTML = "--";
         difficulty.innerHTML = "--";
         bpm.innerHTML = "--BPM";
+        njs.innerHTML = "--NJS"
     }
 
 })();
