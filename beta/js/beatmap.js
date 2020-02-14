@@ -46,17 +46,25 @@ const beatmap = (() => {
         var sumMin = Math.floor(data.length % (1000 * 60 * 60) / (1000 * 60));
         var sumSec = Math.floor(data.length % (1000 * 60) / 1000);
 
+        if (sumSec < 10) {
+            sumSec = "0" + sumSec
+        }
+
         timer.innerHTML = "0:00/" + sumMin + ":" + sumSec;
         timerBar.style.backgroundPositionX = 0*100 + "%";
 
         (function runtimer(){
-            if (data.start > data.paused) {
+            if (data.start != null && data.start > data.paused) {
                 var now = new Date().getTime();
-                var distance = now - data.start - data.paused;
+                var distance = now - data.start;// - data.paused;
                 console.log(distance);
         
                 var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
                 var sec = Math.floor(distance % (1000 * 60) / 1000);
+
+                if (sec < 10) {
+                    sec = "0" + sec
+                }
         
                 timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
         
