@@ -17,6 +17,9 @@ const performance = (() => {
             score.innerHTML = format(data.score);
             accuracy.innerHTML = "(" + (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%)";
             rank.innerHTML = data.rank;
+            if (data.multiplier < 1) {
+                multiplier.innerHTML = "1";
+            }
             multiplier.innerHTML = data.multiplier;
         }
     }
