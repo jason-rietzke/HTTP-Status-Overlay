@@ -9,7 +9,7 @@
     border-radius: 50px;
     background-color: rgba(120, 120, 120, 0.2);
 
-    position: relative;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     transition: 0.5s ease;
