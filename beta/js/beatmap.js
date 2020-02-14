@@ -8,6 +8,7 @@ const beatmap = (() => {
     var bpm = document.getElementById("bpm");
     var njs = document.getElementById("njs");
 
+    var paused = false;
     var timer = document.getElementById("timer");
     var timerBar = document.getElementById("timerBar");
     
@@ -38,6 +39,7 @@ const beatmap = (() => {
             njs.innerHTML = `${format(data.noteJumpSpeed)} NJS`;
 
             setTimer(data);
+            pauseChecker();
         }
     }
 
@@ -70,8 +72,14 @@ const beatmap = (() => {
             }
             setTimeout(runtimer, 1000);
         })();
-
     }
+
+    (function pauseChecker(){
+        if (paused) {
+            pauseTime += 1;
+        }
+        setTimeout(pauseChecker, 1);
+    })();
 
     function clear() {
         cover.setAttribute("src", ``);

@@ -14,6 +14,7 @@ const events = {
         beatmap(data.beatmap);
         performance(data.performance);
         ui.play();
+        beatmap.paused = false;
     },
     finished() {
     },
@@ -21,12 +22,15 @@ const events = {
     },
     menu() {
         ui.menue();
+        beatmap.paused = true;
     },
     pause() {
         ui.pause();
+        beatmap.paused = true;
 	},
 	resume() {
         ui.play();
+        beatmap.paused = false;
     },
     
 
