@@ -56,6 +56,6 @@ const events = {
 
     //map event
     beatmapEvent(data) {
-        beatmap(data.beatmap);
+        //beatmap(data.beatmap);
     }
 }

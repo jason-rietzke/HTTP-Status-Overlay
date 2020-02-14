@@ -24,7 +24,7 @@ const beatmap = (() => {
     }
 
     return (data) => {
-        if (data.start == null) {
+        if (data == null) {
             clear();
         }else{
             if (data.difficulty === "ExpertPlus") {
@@ -70,7 +70,7 @@ const beatmap = (() => {
             
             timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
             timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
-            
+
             setTimeout(runtimer, 1000);
         })();
     }
@@ -78,9 +78,9 @@ const beatmap = (() => {
     function pauseChecker() {
         (function repeater(){
             if (paused) {
-                pauseTime = pauseTime + 1;
+                pauseTime = pauseTime + 100;
             }
-            setTimeout(repeater, 1);
+            setTimeout(repeater, 100);
         })();
     };
 
