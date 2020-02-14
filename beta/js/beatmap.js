@@ -54,10 +54,9 @@ const beatmap = (() => {
         timerBar.style.backgroundPositionX = 0*100 + "%";
 
         (function runtimer(){
-            if (data.start != null && data.start > data.paused) {
+            if (data.start > data.paused) {
                 var now = new Date().getTime();
                 var distance = now - data.start;// - data.paused;
-                console.log(distance);
         
                 var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
                 var sec = Math.floor(distance % (1000 * 60) / 1000);
@@ -68,6 +67,8 @@ const beatmap = (() => {
         
                 timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
         
+                console.log(distance/data.length);
+                console.log(((1 - (distance/data.length))*100));
                 timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
             }
             setTimeout(runtimer, 1000);
