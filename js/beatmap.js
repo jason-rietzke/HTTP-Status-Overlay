@@ -43,8 +43,8 @@ const beatmap = (() => {
         author.innerHTML = "--";
         mapper.innerHTML = "--";
         difficulty.innerHTML = "--";
-        bpm.innerHTML = "--BPM";
-        njs.innerHTML = "--NJS"
+        bpm.innerHTML = "-- BPM";
+        njs.innerHTML = "-- NJS"
     }
 
 })();

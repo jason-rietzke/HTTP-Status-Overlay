@@ -1,5 +1,7 @@
 const query = new URLSearchParams(location.search);
 
+var i = 1;
+
 function connect() {
     var ip = query.get("ip") || "localhost";
     var port = query.get("port") || 6557;
@@ -20,8 +22,9 @@ function connect() {
     });
 
     socket.addEventListener("close", () => {
-        console.log("Failed to connect to server, retrying in 3 seconds");
-        ui.hide();
+        console.log("Failed " + i + " times to connect to server, retrying in 3 seconds");
+        ui.dim();
+        i++;
         setTimeout(connect, 3000);
     });
 }

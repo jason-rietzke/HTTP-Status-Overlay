@@ -15,6 +15,6 @@ const ui = (() => {
 			overlay.classList.add("shown");
 			overlay.classList.remove("dim");
 			overlay.classList.remove("hidden");
-		},
+		}
 	}
 })();
