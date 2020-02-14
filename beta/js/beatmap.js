@@ -60,6 +60,7 @@ const beatmap = (() => {
             if (data.start > data.paused) {
                 var now = new Date().getTime();
                 var distance = now - data.start + pauseTime// - data.paused;
+                console.log(pauseTime);
         
                 var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
                 var sec = Math.floor(distance % (1000 * 60) / 1000);
@@ -78,7 +79,7 @@ const beatmap = (() => {
     function pauseChecker() {
         (function repeater(){
             if (paused) {
-                pauseTime += 1;
+                pauseTime = pauseTime + 1;
             }
             setTimeout(repeater, 1);
         })();
