@@ -57,21 +57,20 @@ const beatmap = (() => {
         timerBar.style.backgroundPositionX = 0*100 + "%";
 
         (function runtimer(){
-            if (data.start > data.paused) {
-                var now = new Date().getTime();
-                var distance = now - data.start + pauseTime// - data.paused;
-                console.log(pauseTime);
-        
-                var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
-                var sec = Math.floor(distance % (1000 * 60) / 1000);
+            var now = new Date().getTime();
+            var distance = now - data.start + pauseTime// - data.paused;
+            console.log(pauseTime);
+            
+            var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+            var sec = Math.floor(distance % (1000 * 60) / 1000);
 
-                if (sec < 10) {
-                    sec = "0" + sec;
-                }
-        
-                timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
-                timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
+            if (sec < 10) {
+                sec = "0" + sec;
             }
+            
+            timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
+            timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
+            
             setTimeout(runtimer, 1000);
         })();
     }
