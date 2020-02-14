@@ -9,6 +9,7 @@ const beatmap = (() => {
     var njs = document.getElementById("njs");
 
     var paused = false;
+    var pauseTime = 0
     var timer = document.getElementById("timer");
     var timerBar = document.getElementById("timerBar");
     
@@ -58,7 +59,7 @@ const beatmap = (() => {
         (function runtimer(){
             if (data.start > data.paused) {
                 var now = new Date().getTime();
-                var distance = now - data.start;// - data.paused;
+                var distance = now - data.start + pauseTime// - data.paused;
         
                 var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
                 var sec = Math.floor(distance % (1000 * 60) / 1000);
