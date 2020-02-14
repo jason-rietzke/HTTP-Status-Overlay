@@ -66,9 +66,6 @@ const beatmap = (() => {
                 }
         
                 timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
-        
-                console.log(distance/data.length);
-                console.log(((1 - (distance/data.length))*100));
                 timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
             }
             setTimeout(runtimer, 1000);
