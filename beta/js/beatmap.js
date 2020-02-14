@@ -47,7 +47,7 @@ const beatmap = (() => {
         var sumSec = Math.floor(data.length % (1000 * 60) / 1000);
 
         var now = new Date().getTime();
-        var distance = now - data.start;// + data.paused;
+        var distance = data.start - now;// + data.paused;
 
         var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
         var sec = Math.floor(distance % (1000 * 60) / 1000);
