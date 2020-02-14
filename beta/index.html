@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BeatSaber HTTP Status Overlay</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/beatmap.css">
+        <link rel="stylesheet" href="./css/performance.css">
+        <link rel="stylesheet" href="./css/saber.css">
+    </head>
+
+    <body>
+
+        <div id="overlay">
+            <div class="songDisplay">
+
+                <div class="performance">
+                    <p class="rank"><span class="accuracy" id="accuracy">(100%)</span> <span id="rank">SS</span></p>
+                    <p class="score"><span id="score">1,000,000</span></p>
+                    <p class="combo"><span class="postfix">combo</span> <span id="combo">200</span></p>
+                </div>
+
+                <div class="song">
+                    <p class="title" id="title">song title</p>
+                    <p class="subtitle" id="subtitle">song subtitle</p>
+                    <hr>
+                    <p class="data"><span class="difficulty" id="difficulty">Expert+</span> <span class="bpm" id="bpm">200 BPM</span> <span class="njs" id="njs">2.5 NJS</span></p>
+                    <hr>
+                    <p class="author"><span class="songPrefix">author: </span><span id="author">song author</span></p>
+                    <p class="mapper"><span class="songPrefix">map by: </span><span id="mapper">song mapper</span></p>
+                    <img class="cover" id="cover" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/1f/1f82a488b31d775905512e5ce8f386b642c58203_full.jpg">
+                </div>
+
+            </div>
+<!--
+            <div class="progressBar">
+                <div class="redSaber">
+                    <div class="redHandle"></div>
+                    <div class="redBlade"></div>
+                </div>
+                <div class="blueSaber">
+                    <div class="blueHandle"><span class="time" id="time"></span></div>
+                    <div class="blueBlade"></div>
+                </div>
+            </div>
+-->
+        </div>
+
+        <script src="./js/ui.js"></script>
+        <script src="./js/beatmap.js"></script>
+        <script src="./js/performance.js"></script>
+        <script src="./js/eventhandler.js"></script>
+        <script src="./js/manager.js"></script>
+    </body>
+</html>
