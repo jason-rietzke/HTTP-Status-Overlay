@@ -1,3 +1,22 @@
+.beatmapDisplay {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+
+    width: 800px;
+    height: 160px;
+    font-size: 300%;
+
+    border-radius: 50px;
+    background-color: rgba(120, 120, 120, 0.2);
+
+    position: relative;
+    top: 20px;
+    transition: 0.5s ease;
+}
+
+
+
 .song {
     float: left;
 

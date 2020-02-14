@@ -13,20 +13,20 @@ const events = {
     songStart(data) {
         beatmap(data.beatmap);
         performance(data.performance);
-        ui.show();
+        ui.play();
     },
     finished() {
     },
     failed() {
     },
     menu() {
-        ui.hide();
+        ui.menue();
     },
     pause() {
-        ui.dim();
+        ui.pause();
 	},
 	resume() {
-        ui.show();
+        ui.play();
     },
     
 

@@ -45,17 +45,7 @@ hr {
     margin: 0px;
 }
 
-.hidden {
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.dim {
-    opacity: 0.5;
-    transition: 0.5s;
-}
-
-.shown {
+.animator {
     opacity: 1;
     transition: 0.5s;
 }
