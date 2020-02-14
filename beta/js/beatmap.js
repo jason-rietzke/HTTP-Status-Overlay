@@ -68,7 +68,7 @@ const beatmap = (() => {
         
                 timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
         
-                timerBar.style.backgroundPositionX = ((data.length/data.length) - 2 + (distance/data.length))*100 + "%";
+                timerBar.style.backgroundPositionX = ((0 + (distance/data.length))*100) + "%";
             }
             setTimeout(runtimer, 1000);
         })();
