@@ -9,12 +9,12 @@ const ui = (() => {
 		play() {
 			overlay.style.opacity = "1";
 			performance.style.top = "20px";
-			beatmap.style.right = "0px";
+			beatmap.style.right = "20px";
 		},
 		pause() {
 			overlay.style.opacity = "0.5";
 			performance.style.top = "20px";
-			beatmap.style.right = "0px";
+			beatmap.style.right = "20px";
 		},
 		menue() {
 			overlay.style.opacity = "1";

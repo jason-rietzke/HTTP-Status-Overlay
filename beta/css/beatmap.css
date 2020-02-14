@@ -1,103 +1,99 @@
 .beatmapDisplay {
-    margin-right: auto;
+    margin-right: 0;
     margin-left: auto;
     padding: 20px;
 
-    width: 800px;
-    height: 160px;
-    font-size: 300%;
+    width: 200px;
 
+    text-align: right;
     border-radius: 50px;
     background-color: rgba(120, 120, 120, 0.2);
 
     position: relative;
-    top: 20px;
+    bottom: 20px;
+    right: 20px;
     transition: 0.5s ease;
 }
 
 
 
-.song {
-    float: left;
 
-    padding: 10px;
-    margin: 0px;
-
-    text-align: center;
+.titleContainer {
+    line-height: 25px;
+    position: relative;
 }
-.songPrefix {
-    padding: 0px;
-    margin: 0px;
-    
-    font-size: 80%;
-    font-weight: 400;
-
-    color: lightgray;
-}
-
 .title {
-    padding: 0px;
-    margin: 0px;
-
     font-size: 150%;
     font-weight: 800;
 }
 .subtitle {
-    padding: 0px;
-    margin: 0px;
-    
     font-size: 100%;
-    font-weight: 400;
+    font-weight: 200;
 }
 
-.data {
-    padding: 5px;
-    margin: 0px;
-    
-    font-size: 100%;
+
+
+
+
+.coverText {
+    position: absolute;
+    line-height: 35px;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
 }
 .difficulty {
-    padding: 3px;
-
-    background-color: rgb(120, 120, 120, 0.5);
+    background-color: rgb(100, 100, 100, 0.5);
     border-radius: 5px;
 
-    font-size: 100%;
-    font-weight: 500;
+    padding: 3px;
+    font-size: 150%;
+    font-weight: 200;
 }
 .bpm {
     padding: 3px;
-    font-size: 100%;
-    font-weight: 300;
+    font-size: 150%;
+    font-weight: 200;
 }
 .njs {
     padding: 3px;
-    font-size: 100%;
-    font-weight: 300;
+    font-size: 150%;
+    font-weight: 200;
 }
-
-.author {
-    padding: 0px;
-    margin: 0px;
-    
-    font-size: 100%;
-    font-weight: 500;
+.coverContainer {
+    position: relative;
+    height: 200px;
+    width: 200px;
 }
-.mapper {
-    padding: 0px;
-    margin: 0px;
-    
-    font-size: 100%;
-    font-weight: 500;
-}
-
 .cover {
-    padding: 0px;
-    padding-top: 5px;
-    margin: 0px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
 
+    right: 0px;
     height: 200px;
     width: 200px;
 
     border-radius: 10px;
+}
+
+
+
+
+
+.author {
+    font-size: 150%;
+    font-weight: 200;
+}
+.mapper {
+    font-size: 150%;
+    font-weight: 200;
+}
+.songPrefix {
+    font-size: 80%;
+    font-weight: 100;
+    color: lightgray;
+}
+.metaContainer {
+    line-height: 25px;
 }
