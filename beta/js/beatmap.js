@@ -7,6 +7,9 @@ const beatmap = (() => {
     var difficulty = document.getElementById("difficulty");
     var bpm = document.getElementById("bpm");
     var njs = document.getElementById("njs");
+
+    var timer = document.getElementById("timer");
+    var timerBar = document.getElementById("timerBar");
     
     function format(number) {
         if (Number.isNaN(number)) {
@@ -33,7 +36,25 @@ const beatmap = (() => {
             difficulty.innerHTML = data.difficulty;
             bpm.innerHTML = `${format(data.songBPM)} BPM`;
             njs.innerHTML = `${format(data.noteJumpSpeed)} NJS`;
+
+            setTimer(data);
         }
+    }
+
+    function setTimer(data) {
+
+        var sumMin = Math.floor(data.length % (1000 * 60 * 60) / (1000 * 60));
+        var sumSec = Math.floor(data.length % (1000 * 60) / 1000);
+
+        var now = new Date().getTime();
+        var distance = now - data.start;// + data.paused;
+
+        var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+        var sec = Math.floor(distance % (1000 * 60) / 1000);
+
+        timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
+
+        timerBar.style.backgroundPositionX = ((data.length - 1) + distance)*100 + "%";
     }
 
     function clear() {
@@ -45,6 +66,9 @@ const beatmap = (() => {
         difficulty.innerHTML = "--";
         bpm.innerHTML = "-- BPM";
         njs.innerHTML = "-- NJS"
+
+        timer.innerHTML = "0:00/0:00";
+        timerBar.style.backgroundPositionX = "50%";
     }
 
 })();

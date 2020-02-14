@@ -11,14 +11,33 @@
 
     <body>
 
-        <div id="overlay">
-            <div class="songDisplay">
+        <div id="ui">
 
-                <div class="performance">
-                    <p class="rank"><span class="accuracy" id="accuracy">(100%)</span> <span id="rank">SS</span></p>
-                    <p class="score"><span id="score">1,000,000</span></p>
-                    <p class="combo"><span class="postfix">combo</span> <span id="combo">200</span></p>
+            <div class="performanceDisplay">
+                
+                <div class="comboContainer">
+                    <span class="comboPrefix">combo</span>
+                    </br>
+                    <span class="combo" id="combo">200</span>
                 </div>
+
+                <div class="scoreContainer">
+                    <div class="timerBar" id="timerBar"></div>
+                    <span class="timer" id="timer">0:00/0:00</span>
+                    </br>
+                    <span class="score" id="score">1,000,000</span>
+                    </br>
+                    <span class="accuracy" id="accuracy">(80%)</span> <span class="rank" id="rank">SS</span>
+                </div>
+
+                <div class="multiplierContainer">
+                    <span class="multiplierPrefix">x</span><span class="multiplier" id="multiplier">8</span>
+                </div>
+
+            </div>
+
+
+            <div class="songDisplay">
 
                 <div class="song">
                     <p class="title" id="title">song title</p>
@@ -32,18 +51,9 @@
                 </div>
 
             </div>
-<!--
-            <div class="progressBar">
-                <div class="redSaber">
-                    <div class="redHandle"></div>
-                    <div class="redBlade"></div>
-                </div>
-                <div class="blueSaber">
-                    <div class="blueHandle"><span class="time" id="time"></span></div>
-                    <div class="blueBlade"></div>
-                </div>
-            </div>
--->
+
+
+            
         </div>
 
         <script src="./js/ui.js"></script>

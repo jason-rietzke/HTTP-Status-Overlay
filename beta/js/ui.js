@@ -1,5 +1,5 @@
 const ui = (() => {
-	var overlay = document.getElementById("overlay");
+	var overlay = document.getElementById("ui");
 	return {
 		hide() {
 			overlay.classList.add("hidden");
