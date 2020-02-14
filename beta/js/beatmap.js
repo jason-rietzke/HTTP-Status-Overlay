@@ -75,12 +75,14 @@ const beatmap = (() => {
         })();
     }
 
-    (function pauseChecker(){
-        if (paused) {
-            pauseTime += 1;
-        }
-        setTimeout(pauseChecker, 1);
-    })();
+    function pauseChecker() {
+        (function repeater(){
+            if (paused) {
+                pauseTime += 1;
+            }
+            setTimeout(repeater, 1);
+        })();
+    };
 
     function clear() {
         cover.setAttribute("src", ``);
