@@ -10,7 +10,7 @@ const ui = (() => {
 			overlay.style.opacity = "1";
 			performance.style.top = "20px";
 			beatmap.style.right = "20px";
-			if (modifier.show) {
+			if (modShow) {
 				modifier.style.left = "20px";
 			}
 		},
@@ -18,7 +18,7 @@ const ui = (() => {
 			overlay.style.opacity = "0.5";
 			performance.style.top = "20px";
 			beatmap.style.right = "20px";
-			if (modifier.show) {
+			if (modShow) {
 				modifier.style.left = "20px";
 			}
 		},

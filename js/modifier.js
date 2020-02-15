@@ -1,5 +1,6 @@
+var modShow = false;
+
 const modifier = (() => {
-    var show = false;
     var multiplier = document.getElementById("totalMultiplier");
     var harderList = document.getElementById("harderList");
     var easierList = document.getElementById("easierList");
@@ -11,52 +12,52 @@ const modifier = (() => {
         // harder List
         if (data.instaFail) {
             harderList.appendChild(document.createTextNode("Insta Fail"));
-            show = true;
+            modShow = true;
         }
         if (data.batteryEnergy) {
             harderList.appendChild(document.createTextNode("Battery Energy"));
-            show = true;
+            modShow = true;
         }
         if (data.disappearingArrows) {
             harderList.appendChild(document.createTextNode("Disappearing Arrows"));
-            show = true;
+            modShow = true;
         }
         if (data.ghostNotes) {
             harderList.appendChild(document.createTextNode("Ghost Notes"));
-            show = true;
+            modShow = true;
         }
         if (data.songSpeed == "Faster") {
             harderList.appendChild(document.createTextNode("Faster Song"));
-            show = true;
+            modShow = true;
         }
 
         // easier List
         if (data.noFail) {
             easierList.appendChild(document.createTextNode("No Fail"));
-            show = true;
+            modShow = true;
         }
         if (data.obstacles == false) {
             easierList.appendChild(document.createTextNode("No Obsticles"));
-            show = true;
+            modShow = true;
         }
         if (data.noBombs) {
             easierList.appendChild(document.createTextNode("No Bombs"));
-            show = true;
+            modShow = true;
         }
         if (data.songSpeed == "Slower") {
             easierList.appendChild(document.createTextNode("Slower Song"));
-            show = true;
+            modShow = true;
         }
         if (data.noArrows) {
             easierList.appendChild(document.createTextNode("No Arrows"));
-            show = true;
+            modShow = true;
         }
 
         multiplier.innerHTML = data.multiplier + "x";
     }
 
     function clear() {
-        show = false;
+        modShow = false;
         harderList.innerHTML = "";
         easierList.innerHTML = "";
         multiplier.innerHTML = "1.00x";
