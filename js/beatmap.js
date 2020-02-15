@@ -52,7 +52,7 @@ const beatmap = (() => {
     }
 
     function setTimer(data) {
-/*
+
         var sumMin = Math.floor(data.length % (1000 * 60 * 60) / (1000 * 60));
         var sumSec = Math.floor(data.length % (1000 * 60) / 1000);
 
@@ -62,7 +62,7 @@ const beatmap = (() => {
 
         timer.innerHTML = "0:00/" + sumMin + ":" + sumSec;
         timerBar.style.backgroundPositionX = 0*100 + "%";
-*/
+
         (function runtimer(){
             if (!paused) {
 
@@ -82,7 +82,11 @@ const beatmap = (() => {
                 timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
                 timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
             }
-            setTimeout(runtimer, 1000);
+            
+            var rightNow = new Date().getTime();
+            if (((rightNow - start) - pauseTime) < data.length) {
+                setTimeout(runtimer, 1000);
+            }
         })();
     }
 
