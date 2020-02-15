@@ -20,6 +20,10 @@ hr {
     margin: 2px;
 }
 
+.background {
+    filter: blur(10px);
+}
+
 
 .overlay {
     padding: 0px;
