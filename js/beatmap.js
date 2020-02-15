@@ -2,7 +2,7 @@ var start = 0;
 var paused = false;
 var pause = 0;
 var pauseTime = 0;
-var songHash = "";
+var songLenght = 0;
 
 const beatmap = (() => {
     var cover = document.getElementById("cover");
@@ -31,8 +31,7 @@ const beatmap = (() => {
         if (data == null) {
             clear();
         }else{
-            songHash = data.songHash;
-            console.log(songHash);
+            songLenght = data.length;
             if (data.difficulty === "ExpertPlus") {
                 data.difficulty = "Expert+";
             }
@@ -86,10 +85,8 @@ const beatmap = (() => {
                 timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
             }
             
-            if (songHash == data.songHash) {
+            if (songLenght == data.length) {
                 setTimeout(runtimer, 1000);
-            } else {
-                console.log(songHash + "-" + data.songHash);
             }
         })();
     }
