@@ -52,7 +52,7 @@ const beatmap = (() => {
     }
 
     function setTimer(data) {
-
+/*
         var sumMin = Math.floor(data.length % (1000 * 60 * 60) / (1000 * 60));
         var sumSec = Math.floor(data.length % (1000 * 60) / 1000);
 
@@ -62,7 +62,7 @@ const beatmap = (() => {
 
         timer.innerHTML = "0:00/" + sumMin + ":" + sumSec;
         timerBar.style.backgroundPositionX = 0*100 + "%";
-
+*/
         (function runtimer(){
             if (!paused) {
 

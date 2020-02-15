@@ -2,11 +2,6 @@ const events = {
 
     hello(data) {
         console.log("Connected to Beat Saber");
-        if (data.beatmap && data.performance) {
-            beatmap(data.beatmap);
-            performance(data.performance);
-            modifier(data.mod);
-        }
     },
 
 
