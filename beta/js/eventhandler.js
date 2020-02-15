@@ -15,6 +15,9 @@ const events = {
         performance(data.performance);
         ui.play();
         beatmap.paused = false;
+        beatmap.start = new Date().getTime();
+        beatmap.pause = 0;
+        beatmap.pauseTime = 0;
     },
     finished() {
     },
@@ -22,15 +25,16 @@ const events = {
     },
     menu() {
         ui.menue();
-        beatmap.paused = true;
     },
     pause() {
         ui.pause();
         beatmap.paused = true;
+        beatmap.pause = new Date().getTime();
 	},
 	resume() {
         ui.play();
         beatmap.paused = false;
+        beatmap.pauseTime = Date().getTime() - beatmap.pause;
     },
     
 

@@ -8,8 +8,10 @@ const beatmap = (() => {
     var bpm = document.getElementById("bpm");
     var njs = document.getElementById("njs");
 
+    var start = 0;
     var paused = false;
-    var pauseTime = 0
+    var pause = 0;
+    var pauseTime = 0;
     var timer = document.getElementById("timer");
     var timerBar = document.getElementById("timerBar");
     
@@ -33,8 +35,13 @@ const beatmap = (() => {
             cover.setAttribute("src", `data:image/png;base64,${data.songCover}`);
             title.innerHTML = data.songName;
             subtitle.innerHTML = data.songSubName;
+
             author.innerHTML = data.songAuthorName;
-            mapper.innerHTML = data.levelAuthorName;
+            if (data.levelAuthorName == "") {
+                mapper.innerHTML = data.songAuthorName;
+            } else {
+                mapper.innerHTML = data.levelAuthorName;
+            }
             difficulty.innerHTML = data.difficulty;
             bpm.innerHTML = `${format(data.songBPM)} BPM`;
             njs.innerHTML = `${format(data.noteJumpSpeed)} NJS`;
@@ -57,32 +64,23 @@ const beatmap = (() => {
         timerBar.style.backgroundPositionX = 0*100 + "%";
 
         (function runtimer(){
-            var now = new Date().getTime();
-            var distance = now - data.start + pauseTime// - data.paused;
-            console.log(pauseTime);
-            
-            var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
-            var sec = Math.floor(distance % (1000 * 60) / 1000);
+            if (!paused) {
+                var now = new Date().getTime();
+                var distance = (now - start) - pauseTime;
+                
+                var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+                var sec = Math.floor(distance % (1000 * 60) / 1000);
 
-            if (sec < 10) {
-                sec = "0" + sec;
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+                
+                timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
+                timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
             }
-            
-            timer.innerHTML = min + ":" + sec + "/" + sumMin + ":" + sumSec;
-            timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
-
             setTimeout(runtimer, 1000);
         })();
     }
-
-    function pauseChecker() {
-        (function repeater(){
-            if (paused) {
-                pauseTime = pauseTime + 100;
-            }
-            setTimeout(repeater, 100);
-        })();
-    };
 
     function clear() {
         cover.setAttribute("src", ``);

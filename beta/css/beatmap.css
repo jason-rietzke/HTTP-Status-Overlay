@@ -7,7 +7,7 @@
 
     text-align: right;
     border-radius: 50px;
-    background-color: rgba(120, 120, 120, 0.2);
+    background-color: rgba(120, 120, 120, 0.3);
 
     position: absolute;
     bottom: 20px;
@@ -43,7 +43,7 @@
     right: 0;
 }
 .difficulty {
-    background-color: rgb(100, 100, 100, 0.5);
+    background-color: rgb(100, 100, 100, 0.6);
     border-radius: 5px;
 
     padding: 3px;
@@ -51,11 +51,17 @@
     font-weight: 200;
 }
 .bpm {
+    background-color: rgb(100, 100, 100, 0.6);
+    border-radius: 5px;
+
     padding: 3px;
     font-size: 150%;
     font-weight: 200;
 }
 .njs {
+    background-color: rgb(100, 100, 100, 0.6);
+    border-radius: 5px;
+    
     padding: 3px;
     font-size: 150%;
     font-weight: 200;
@@ -68,7 +74,6 @@
 .cover {
     position: absolute;
     z-index: -1;
-    opacity: 0.75;
 
     right: 0px;
     height: 200px;
