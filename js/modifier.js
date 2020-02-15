@@ -57,8 +57,8 @@ const modifier = (() => {
 
     function clear() {
         show = false;
-        harderList.empty();
-        easierList.empty();
+        harderList.innerHTML = "";
+        easierList.innerHTML = "";
         multiplier.innerHTML = "1.00x";
     }
 
