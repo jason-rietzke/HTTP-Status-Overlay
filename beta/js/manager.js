@@ -10,7 +10,7 @@ function connect() {
 
     socket.addEventListener("open", () => {
         console.log("WebSocket opened");
-        ui.play();
+        ui.menue();
     });
 
     socket.addEventListener("message", (message) => {
