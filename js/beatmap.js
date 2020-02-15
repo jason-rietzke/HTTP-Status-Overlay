@@ -64,6 +64,10 @@ const beatmap = (() => {
 
         (function runtimer(){
             if (!paused) {
+                
+                var sumMin = Math.floor(data.length % (1000 * 60 * 60) / (1000 * 60));
+                var sumSec = Math.floor(data.length % (1000 * 60) / 1000);
+
                 var now = new Date().getTime();
                 var distance = (now - start) - pauseTime;
                 
