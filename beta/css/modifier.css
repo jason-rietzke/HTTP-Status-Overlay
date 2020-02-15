@@ -1,0 +1,35 @@
+.modifierDisplay {
+    margin-right: auto;
+    margin-left: 0;
+    padding: 20px;
+
+    width: 200px;
+
+    border-radius: 50px;
+    background-color: rgba(120, 120, 120, 0.3);
+
+    font-size: 150%;
+    font-weight: 600;
+
+    position: absolute;
+    bottom: 20px;
+    left: -250px;
+    transition: 0.5s ease;
+} 
+
+.modList {
+    font-size: 60%;
+    font-weight: 100;
+    list-style-type: circle;
+    line-height: 25px;
+}
+
+.totalMultiplierPrefix {
+    font-size: 60%;
+    font-weight: 100;
+    color: lightgray;
+}
+.totalMultiplier {
+    font-size: 80%;
+    font-weight: 200;
+}

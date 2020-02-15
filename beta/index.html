@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/beatmap.css">
         <link rel="stylesheet" href="./css/performance.css">
-        <link rel="stylesheet" href="./css/saber.css">
+        <link rel="stylesheet" href="./css/modifier.css">
     </head>
 
     <body>
@@ -59,29 +59,26 @@
 
                 
             </div>
-<!--
-            <div class="songDisplay">
 
-                <div class="song">
-                    <p class="title" id="title">song title</p>
-                    <p class="subtitle" id="subtitle">song subtitle</p>
-                    <hr>
-                    <p class="data"><span class="difficulty" id="difficulty">Expert+</span> <span class="bpm" id="bpm">200 BPM</span> <span class="njs" id="njs">2.5 NJS</span></p>
-                    <hr>
-                    <p class="author"><span class="songPrefix">author: </span><span id="author">song author</span></p>
-                    <p class="mapper"><span class="songPrefix">map by: </span><span id="mapper">song mapper</span></p>
-                    <img class="cover" id="cover" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/1f/1f82a488b31d775905512e5ce8f386b642c58203_full.jpg">
-                </div>
 
+            <div class="modifierDisplay" id="modifierDisplay">
+                Active Modifier:
+
+                <ul class="modList" id="harderList">
+                </ul>
+
+                <ul class="modList" id="easierList">
+                </ul>
+
+                <span class="totalMultiplierPrefix">Total Multiplier</span> <span class="totalMultiplier" id="totalMultiplier">1.00x</span>
             </div>
-        -->
-
             
         </div>
 
         <script src="./js/ui.js"></script>
         <script src="./js/beatmap.js"></script>
         <script src="./js/performance.js"></script>
+        <script src="./js/modifier.js"></script>
         <script src="./js/eventhandler.js"></script>
         <script src="./js/manager.js"></script>
     </body>

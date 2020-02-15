@@ -5,6 +5,7 @@ const events = {
         if (data.beatmap && data.performance) {
             beatmap(data.beatmap);
             performance(data.performance);
+            modifier(data.mod);
         }
     },
 
@@ -13,6 +14,7 @@ const events = {
     songStart(data) {
         beatmap(data.beatmap);
         performance(data.performance);
+        modifier(data.mod);
         ui.play();
         beatmap.paused = false;
         beatmap.start = new Date().getTime();

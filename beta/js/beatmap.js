@@ -47,7 +47,6 @@ const beatmap = (() => {
             njs.innerHTML = `${format(data.noteJumpSpeed)} NJS`;
 
             setTimer(data);
-            pauseChecker();
         }
     }
 

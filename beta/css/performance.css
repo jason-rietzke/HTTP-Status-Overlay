@@ -115,11 +115,11 @@
     margin-left: 40px;
 
     text-align: center;
-    line-height: 130px;
+    line-height: 135px;
 
     border-radius: 100%;
     border-color: rgb(255, 255, 255);
-    border-width: 3px;
+    border-width: 5px;
     border-style: solid;
 }
 .multiplierPrefix {
