@@ -5,6 +5,7 @@ const events = {
         if (data.beatmap && data.performance) {
             beatmap(data.beatmap);
             performance(data.performance);
+            modifier(data.mod);
         }
     },
 
@@ -13,20 +14,29 @@ const events = {
     songStart(data) {
         beatmap(data.beatmap);
         performance(data.performance);
-        ui.show();
+        modifier(data.mod);
+        ui.play();
+        beatmap.paused = false;
+        beatmap.start = new Date().getTime();
+        beatmap.pause = 0;
+        beatmap.pauseTime = 0;
     },
     finished() {
     },
     failed() {
     },
     menu() {
-        ui.hide();
+        ui.menue();
     },
     pause() {
-        ui.dim();
+        ui.pause();
+        beatmap.paused = true;
+        beatmap.pause = new Date().getTime();
 	},
 	resume() {
-        ui.show();
+        ui.play();
+        beatmap.paused = false;
+        beatmap.pauseTime = Date().getTime() - beatmap.pause;
     },
     
 
@@ -52,6 +62,6 @@ const events = {
 
     //map event
     beatmapEvent(data) {
-        beatmap(data.beatmap);
+        //beatmap(data.beatmap);
     }
 }

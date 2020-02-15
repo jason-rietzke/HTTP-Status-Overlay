@@ -1,20 +1,33 @@
 const ui = (() => {
-	var overlay = document.getElementById("overlay");
+	var overlay = document.getElementById("ui");
+	var performance = document.getElementById("performanceDisplay");
+	var beatmap = document.getElementById("beatmapDisplay");
+	var modifier = document.getElementById("modifierDisplay");
+	var results = document.getElementById("resultsDisplay");
+
 	return {
-		hide() {
-			overlay.classList.add("hidden");
-			overlay.classList.remove("dim");
-			overlay.classList.remove("shown");
+		play() {
+			overlay.style.opacity = "1";
+			performance.style.top = "20px";
+			beatmap.style.right = "20px";
+			if (modifier.show) {
+				modifier.style.left = "20px";
+			}
 		},
-		dim() {
-			overlay.classList.add("dim");
-			overlay.classList.remove("hidden");
-			overlay.classList.remove("shown");
+		pause() {
+			overlay.style.opacity = "0.5";
+			performance.style.top = "20px";
+			beatmap.style.right = "20px";
+			if (modifier.show) {
+				modifier.style.left = "20px";
+			}
 		},
-		show() {
-			overlay.classList.add("shown");
-			overlay.classList.remove("dim");
-			overlay.classList.remove("hidden");
+		menue() {
+			overlay.style.opacity = "1";
+			performance.style.top = "-200px";
+			beatmap.style.right = "-250px";
+			modifier.style.left = "-250px";
 		}
+		
 	}
 })();

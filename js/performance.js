@@ -1,8 +1,9 @@
 const performance = (() => {
-    var rank = document.getElementById("rank");
-    var accuracy = document.getElementById("accuracy");
-    var score = document.getElementById("score");
     var combo = document.getElementById("combo");
+    var score = document.getElementById("score");
+    var accuracy = document.getElementById("accuracy");
+    var rank = document.getElementById("rank");
+    var multiplier = document.getElementById("multiplier");
 
     function format(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -12,18 +13,23 @@ const performance = (() => {
         if (data.passedNotes == 0) {
             clear();
         }else{
-            rank.innerHTML = data.rank;
-            accuracy.innerHTML = "(" + (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%)";
-            score.innerHTML = format(data.score);
             combo.innerHTML = data.combo;
+            score.innerHTML = format(data.score);
+            accuracy.innerHTML = "(" + (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%)";
+            rank.innerHTML = data.rank;
+            if (data.multiplier < 1) {
+                multiplier.innerHTML = "1";
+            }
+            multiplier.innerHTML = data.multiplier;
         }
     }
 
     function clear() {
-        rank.innerHTML = "SS";
-        accuracy.innerHTML = "(" + "100" + "%)";
-        score.innerHTML = "0";
         combo.innerHTML = "0";
+        score.innerHTML = "0";
+        accuracy.innerHTML = "(100%)";
+        rank.innerHTML = "SS";
+        multiplier.innerHTML = "0";
     }
 
 })();

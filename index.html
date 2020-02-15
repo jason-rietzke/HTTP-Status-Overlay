@@ -6,49 +6,79 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/beatmap.css">
         <link rel="stylesheet" href="./css/performance.css">
-        <link rel="stylesheet" href="./css/saber.css">
+        <link rel="stylesheet" href="./css/modifier.css">
     </head>
 
     <body>
 
-        <div id="overlay">
-            <div class="songDisplay">
+        <div class="animator" id="ui">
 
-                <div class="performance">
-                    <p class="rank"><span class="accuracy" id="accuracy">(100%)</span> <span id="rank">SS</span></p>
-                    <p class="score"><span id="score">1,000,000</span></p>
-                    <p class="combo"><span class="postfix">combo</span> <span id="combo">200</span></p>
+            <div class="performanceDisplay" id="performanceDisplay">
+                
+                <div class="comboContainer">
+                    <span class="comboPrefix">combo</span>
+                    </br>
+                    <span class="combo" id="combo">200</span>
                 </div>
 
-                <div class="song">
-                    <p class="title" id="title">song title</p>
-                    <p class="subtitle" id="subtitle">song subtitle</p>
-                    <hr>
-                    <p class="data"><span class="difficulty" id="difficulty">Expert+</span> <span class="bpm" id="bpm">200 BPM</span> <span class="njs" id="njs">2.5 NJS</span></p>
-                    <hr>
-                    <p class="author"><span class="songPrefix">author: </span><span id="author">song author</span></p>
-                    <p class="mapper"><span class="songPrefix">map by: </span><span id="mapper">song mapper</span></p>
+                <div class="scoreContainer">
+                    <div class="timerBar" id="timerBar"></div>
+                    <span class="timer" id="timer">0:00/0:00</span>
+                    </br>
+                    <span class="score" id="score">1,000,000</span>
+                    </br>
+                    <span class="accuracy" id="accuracy">(80%)</span> <span class="rank" id="rank">SS</span>
+                </div>
+
+                <div class="multiplierContainer">
+                    <span class="multiplierPrefix">x</span><span class="multiplier" id="multiplier">8</span>
+                </div>
+
+            </div>
+
+
+            <div class="beatmapDisplay" id="beatmapDisplay">
+                <div class="titleContainer">
+                    <span class="title" id="title">song title</span><br>
+                    <span class="subtitle" id="subtitle">song subtitle</span>
+                </div>
+                </br>
+                <div class="coverContainer">
                     <img class="cover" id="cover" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/1f/1f82a488b31d775905512e5ce8f386b642c58203_full.jpg">
+                    <div class="coverText">
+                        <span class="difficulty" id="difficulty">Expert+</span></br>
+                        <span class="bpm" id="bpm">120 BPM</span></br>
+                        <span class="njs" id="njs">200 NJS</span>
+                    </div>
+                </div>
+                </br>
+                <div class="metaContainer">
+                    <span class="songPrefix">author:</span></br><span class="author" id="author">song author</span></br></br>
+                    <span class="songPrefix">map by:</span></br><span class="mapper" id="mapper">song mapper</span>
                 </div>
 
+                
             </div>
-<!--
-            <div class="progressBar">
-                <div class="redSaber">
-                    <div class="redHandle"></div>
-                    <div class="redBlade"></div>
-                </div>
-                <div class="blueSaber">
-                    <div class="blueHandle"><span class="time" id="time"></span></div>
-                    <div class="blueBlade"></div>
-                </div>
+
+
+            <div class="modifierDisplay" id="modifierDisplay">
+                Active Modifier:
+
+                <ul class="modList" id="harderList">
+                </ul>
+
+                <ul class="modList" id="easierList">
+                </ul>
+
+                <span class="totalMultiplierPrefix">Total Multiplier</span> <span class="totalMultiplier" id="totalMultiplier">1.00x</span>
             </div>
--->
+            
         </div>
 
         <script src="./js/ui.js"></script>
         <script src="./js/beatmap.js"></script>
         <script src="./js/performance.js"></script>
+        <script src="./js/modifier.js"></script>
         <script src="./js/eventhandler.js"></script>
         <script src="./js/manager.js"></script>
     </body>

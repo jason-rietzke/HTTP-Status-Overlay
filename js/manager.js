@@ -10,7 +10,7 @@ function connect() {
 
     socket.addEventListener("open", () => {
         console.log("WebSocket opened");
-        ui.show();
+        ui.menue();
     });
 
     socket.addEventListener("message", (message) => {
@@ -23,7 +23,7 @@ function connect() {
 
     socket.addEventListener("close", () => {
         console.log("Failed " + i + " times to connect to server, retrying in 3 seconds");
-        ui.dim();
+        ui.pause();
         i++;
         setTimeout(connect, 3000);
     });
