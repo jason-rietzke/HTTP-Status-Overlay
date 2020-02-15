@@ -17,7 +17,8 @@ const events = {
         modifier(data.mod);
         ui.play();
         beatmap.paused = false;
-        beatmap.start = Date().getTime();
+        var now = new Date().getTime();
+        beatmap.start = now;
         beatmap.pause = 0;
         beatmap.pauseTime = 0;
     },
@@ -31,12 +32,14 @@ const events = {
     pause() {
         ui.pause();
         beatmap.paused = true;
-        beatmap.pause = Date().getTime();
+        var now = new Date().getTime();
+        beatmap.pause = now;
 	},
 	resume() {
         ui.play();
         beatmap.paused = false;
-        beatmap.pauseTime = Date().getTime() - beatmap.pause;
+        var now = new Date().getTime();
+        beatmap.pauseTime = now - beatmap.pause;
     },
     
 
