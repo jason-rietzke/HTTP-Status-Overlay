@@ -31,7 +31,8 @@ const beatmap = (() => {
         if (data == null) {
             clear();
         }else{
-            songHash = data.songHash
+            songHash = data.songHash;
+            console.log(songHash);
             if (data.difficulty === "ExpertPlus") {
                 data.difficulty = "Expert+";
             }
@@ -87,6 +88,8 @@ const beatmap = (() => {
             
             if (songHash == data.songHash) {
                 setTimeout(runtimer, 1000);
+            } else {
+                console.log(songHash + "-" + data.songHash);
             }
         })();
     }
