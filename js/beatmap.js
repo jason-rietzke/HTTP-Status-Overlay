@@ -2,6 +2,7 @@ var start = 0;
 var paused = false;
 var pause = 0;
 var pauseTime = 0;
+var songHash = "";
 
 const beatmap = (() => {
     var cover = document.getElementById("cover");
@@ -30,6 +31,7 @@ const beatmap = (() => {
         if (data == null) {
             clear();
         }else{
+            songHash = data.songHash
             if (data.difficulty === "ExpertPlus") {
                 data.difficulty = "Expert+";
             }
@@ -83,8 +85,7 @@ const beatmap = (() => {
                 timerBar.style.backgroundPositionX = ((1 - (distance/data.length))*100) + "%";
             }
             
-            var rightNow = new Date().getTime();
-            if (((rightNow - start) - pauseTime) < data.length) {
+            if (songHash == data.songHash) {
                 setTimeout(runtimer, 1000);
             }
         })();
