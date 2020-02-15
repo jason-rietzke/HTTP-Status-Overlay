@@ -17,7 +17,7 @@ const events = {
         modifier(data.mod);
         ui.play();
         beatmap.paused = false;
-        beatmap.start = new Date().getTime();
+        beatmap.start = Date().getTime();
         beatmap.pause = 0;
         beatmap.pauseTime = 0;
     },
@@ -31,7 +31,7 @@ const events = {
     pause() {
         ui.pause();
         beatmap.paused = true;
-        beatmap.pause = new Date().getTime();
+        beatmap.pause = Date().getTime();
 	},
 	resume() {
         ui.play();
