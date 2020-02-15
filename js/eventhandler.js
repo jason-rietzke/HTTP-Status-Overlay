@@ -16,11 +16,11 @@ const events = {
         performance(data.performance);
         modifier(data.mod);
         ui.play();
-        beatmap.paused = false;
+        paused = false;
         var now = new Date().getTime();
-        beatmap.start = now;
-        beatmap.pause = 0;
-        beatmap.pauseTime = 0;
+        start = now;
+        pause = 0;
+        pauseTime = 0;
     },
     finished() {
     },
@@ -31,15 +31,15 @@ const events = {
     },
     pause() {
         ui.pause();
-        beatmap.paused = true;
+        paused = true;
         var now = new Date().getTime();
-        beatmap.pause = now;
+        pause = now;
 	},
 	resume() {
         ui.play();
-        beatmap.paused = false;
+        paused = false;
         var now = new Date().getTime();
-        beatmap.pauseTime = now - beatmap.pause;
+        pauseTime = now - pause;
     },
     
 

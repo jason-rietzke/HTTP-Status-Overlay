@@ -1,3 +1,8 @@
+var start = 0;
+var paused = false;
+var pause = 0;
+var pauseTime = 0;
+
 const beatmap = (() => {
     var cover = document.getElementById("cover");
     var title = document.getElementById("title");
@@ -8,10 +13,6 @@ const beatmap = (() => {
     var bpm = document.getElementById("bpm");
     var njs = document.getElementById("njs");
 
-    var start = 0;
-    var paused = false;
-    var pause = 0;
-    var pauseTime = 0;
     var timer = document.getElementById("timer");
     var timerBar = document.getElementById("timerBar");
     
@@ -64,7 +65,7 @@ const beatmap = (() => {
 
         (function runtimer(){
             if (!paused) {
-                
+
                 var sumMin = Math.floor(data.length % (1000 * 60 * 60) / (1000 * 60));
                 var sumSec = Math.floor(data.length % (1000 * 60) / 1000);
 
