@@ -13,8 +13,8 @@ const results = (() => {
     var misses = document.getElementById("noteMisses");
     var combo = document.getElementById("noteMaxCombo");
     var score = document.getElementById("songsScore");
-    var finnished = document.getElementById("songsFinnished");
-    var failed = document.getElementById("songsFailed");
+    var finnishedS = document.getElementById("songsFinnished");
+    var failedS = document.getElementById("songsFailed");
     
     function format(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -25,8 +25,8 @@ const results = (() => {
         misses.innerHTML = format(noteMisses);
         combo.innerHTML = format(noteMaxCombo);
         score.innerHTML = format(totalScore + interimScore);
-        finnished = format(finnishedSongs);
-        failed = format(failedSongs);
+        finnishedS = format(finnishedSongs);
+        failedS = format(failedSongs);
     }
 
 })();
