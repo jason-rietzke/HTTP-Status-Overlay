@@ -5,6 +5,7 @@
         <title>BeatSaber HTTP Status Overlay</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/beatmap.css">
+        <link rel="stylesheet" href="./css/results.css">
         <link rel="stylesheet" href="./css/performance.css">
         <link rel="stylesheet" href="./css/modifier.css">
     </head>
@@ -18,6 +19,8 @@
                     <span class="comboPrefix">combo</span>
                     </br>
                     <span class="combo" id="combo">200</span>
+                    </br>
+                    <span class="maxComboPrefix">max: </span><span class="maxCombo" id="maxCombo">200</span>
                 </div>
 
                 <div class="scoreContainer">
@@ -34,11 +37,25 @@
                 </div>
             </div>
 
-<!--
-            <div class="resultsDisplay" id="resultsDisplay">
 
+            <div class="resultsDisplay" id="resultsDisplay">
+                <span>Values ​​of today's session</span></br></br>
+                <div>
+                    <div class="resultsContainer">
+                        Notes:</br>
+                        <span class="notes" id="noteCuts">10,000</span> <span class="resultsPostfix">cuts</span></br>
+                        <span class="notes" id="noteMisses">1,000</span> <span class="resultsPostfix">misses</span></br>
+                        <span class="notes" id="noteMaxCombo">342</span> <span class="resultsPostfix">max combo</span></br>
+                    </div>
+                    <div class="resultsContainer">
+                        Performance:</br>
+                        <span class="performance" id="songsScore">12,000,000</span> <span class="resultsPostfix">pp</span></br>
+                        <span class="performance" id="songsFinnished">12</span> <span class="resultsPostfix">songs finnished</span></br>
+                        <span class="performance" id="songsFailed">4</span> <span class="resultsPostfix">songs failed</span></br>
+                    </div>
+                </div>
             </div>
--->
+
 
             <div class="beatmapDisplay" id="beatmapDisplay">
                 <div class="titleContainer">
@@ -78,6 +95,7 @@
 
         <script src="./js/ui.js"></script>
         <script src="./js/beatmap.js"></script>
+        <script src="./js/results.js"></script>
         <script src="./js/performance.js"></script>
         <script src="./js/modifier.js"></script>
         <script src="./js/eventhandler.js"></script>

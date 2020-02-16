@@ -17,18 +17,26 @@ const events = {
         pause = 0;
         pauseTime = 0;
     },
-    finished() {
+    finished(data) {
+        finnishedSongs += 1;
+        interimScore = 0;
+        totalScore += data.score;
     },
-    failed() {
+    failed(data) {
+        failedSongs += 1;
+        interimScore = 0;
+        totalScore += data.score;
     },
     menu() {
         ui.menue();
+        results();
     },
     pause() {
         ui.pause();
         paused = true;
         var now = new Date().getTime();
         pause = now;
+        results();
 	},
 	resume() {
         ui.play();
@@ -40,10 +48,12 @@ const events = {
 
     //note events
     noteCut(data) {
+        noteCuts += 1;
     },
     noteFullyCut(data) {
     },
     noteMissed(data) {
+        noteMisses += 1;
     },
     bombCut(data) {
     },

@@ -1,0 +1,52 @@
+.resultsDisplay {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+
+    width: 800px;
+    height: 250px;
+    font-size: 150%;
+    text-align: center;
+
+    border-radius: 50px;
+    background-color: rgba(120, 120, 120, 0.3);
+
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 420px);
+    transition: 0.5s ease;
+}
+.resultsPostfix {
+    font-size: 80%;
+    font-weight: 100;
+    color: lightgray;
+
+    position: relative;
+    left: 20px;
+}
+
+.resultsContainer {
+    width: 400px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 80%;
+    float: left;
+    line-height: 40px;
+    text-align: left;
+}
+.notes {
+    font-size: 120%;
+    font-weight: 400;
+
+    position: relative;
+    left: 20px;
+}
+.performance {
+    font-size: 120%;
+    font-weight: 400;
+
+    position: relative;
+    left: 20px;
+}

@@ -27,7 +27,7 @@
     margin-right: 40px;
 
     text-align: center;
-    line-height: 60px;
+    line-height: 45px;
 
     border-radius: 0%;
     border-color: white;
@@ -43,6 +43,15 @@
 }
 .combo {
     font-size: 120%;
+    font-weight: 400;
+}
+.maxComboPrefix {
+    font-size: 40%;
+    font-weight: 100;
+    color: lightgray;
+}
+.maxCombo {
+    font-size: 40%;
     font-weight: 400;
 }
 
