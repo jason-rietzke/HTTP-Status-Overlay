@@ -12,45 +12,35 @@ const modifier = (() => {
         // harder List
         if (data.instaFail) {
             addLi(harderList, "Insta Fail");
-            modShow = true;
         }
         if (data.batteryEnergy) {
             addLi(harderList, "Battery Energy");
-            modShow = true;
         }
         if (data.disappearingArrows) {
             addLi(harderList, "Disappearing Arrows");
-            modShow = true;
         }
         if (data.ghostNotes) {
             addLi(harderList, "Ghost Notes");
-            modShow = true;
         }
         if (data.songSpeed == "Faster") {
             addLi(harderList, "Faster Song");
-            modShow = true;
         }
 
         // easier List
         if (data.noFail) {
             addLi(easierList, "No Fail");
-            modShow = true;
         }
         if (data.obstacles == false) {
             addLi(easierList, "No Obsticles");
-            modShow = true;
         }
         if (data.noBombs) {
             addLi(easierList, "No Bombs");
-            modShow = true;
         }
         if (data.songSpeed == "Slower") {
             addLi(easierList, "Slower Song");
-            modShow = true;
         }
         if (data.noArrows) {
             addLi(easierList, "No Arrows");
-            modShow = true;
         }
 
         multiplier.innerHTML = data.multiplier.toFixed(2) + "x";
@@ -60,6 +50,7 @@ const modifier = (() => {
         var li = document.createElement('li');
         li.appendChild(document.createTextNode(name));
         list.appendChild(li);
+        modShow = true;
     }
 
     function clear() {
