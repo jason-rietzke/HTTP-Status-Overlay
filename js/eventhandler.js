@@ -2,6 +2,7 @@ const events = {
 
     hello(data) {
         console.log("Connected to Beat Saber");
+        results();
     },
 
 
