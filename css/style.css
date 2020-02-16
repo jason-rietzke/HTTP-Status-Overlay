@@ -20,35 +20,6 @@ hr {
     margin: 2px;
 }
 
-.background {
-    filter: blur(10px);
-}
-
-
-.overlay {
-    padding: 0px;
-    margin: 0px;
-}
-
-.songDisplay {
-    position: absolute;
-    bottom: 45px;
-    bottom: 0px;
-    right: 0px;
-    
-    padding: 0px;
-    margin: 0px;
-}
-
-.hitDisplay {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    
-    padding: 0px;
-    margin: 0px;
-}
-
 .animator {
     opacity: 1;
     transition: 0.5s;

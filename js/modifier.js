@@ -53,7 +53,7 @@ const modifier = (() => {
             modShow = true;
         }
 
-        multiplier.innerHTML = data.multiplier + "x";
+        multiplier.innerHTML = data.multiplier.toFixed(2) + "x";
     }
 
     function addLi(list, name) {
