@@ -11,49 +11,55 @@ const modifier = (() => {
 
         // harder List
         if (data.instaFail) {
-            harderList.appendChild(document.createTextNode("Insta Fail"));
+            addLi(harderList, "Insta Fail");
             modShow = true;
         }
         if (data.batteryEnergy) {
-            harderList.appendChild(document.createTextNode("Battery Energy"));
+            addLi(harderList, "Battery Energy");
             modShow = true;
         }
         if (data.disappearingArrows) {
-            harderList.appendChild(document.createTextNode("Disappearing Arrows"));
+            addLi(harderList, "Disappearing Arrows");
             modShow = true;
         }
         if (data.ghostNotes) {
-            harderList.appendChild(document.createTextNode("Ghost Notes"));
+            addLi(harderList, "Ghost Notes");
             modShow = true;
         }
         if (data.songSpeed == "Faster") {
-            harderList.appendChild(document.createTextNode("Faster Song"));
+            addLi(harderList, "Faster Song");
             modShow = true;
         }
 
         // easier List
         if (data.noFail) {
-            easierList.appendChild(document.createTextNode("No Fail"));
+            addLi(easierList, "No Fail");
             modShow = true;
         }
         if (data.obstacles == false) {
-            easierList.appendChild(document.createTextNode("No Obsticles"));
+            addLi(easierList, "No Obsticles");
             modShow = true;
         }
         if (data.noBombs) {
-            easierList.appendChild(document.createTextNode("No Bombs"));
+            addLi(easierList, "No Bombs");
             modShow = true;
         }
         if (data.songSpeed == "Slower") {
-            easierList.appendChild(document.createTextNode("Slower Song"));
+            addLi(easierList, "Slower Song");
             modShow = true;
         }
         if (data.noArrows) {
-            easierList.appendChild(document.createTextNode("No Arrows"));
+            addLi(easierList, "No Arrows");
             modShow = true;
         }
 
         multiplier.innerHTML = data.multiplier + "x";
+    }
+
+    function addLi(list, name) {
+        var li = document.createElement('li');
+        li.appendChild(document.createTextNode(name));
+        list.appendChild(li);
     }
 
     function clear() {
