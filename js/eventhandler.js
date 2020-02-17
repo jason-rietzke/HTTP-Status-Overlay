@@ -32,6 +32,7 @@ const events = {
     },
     menu() {
         ui.menue();
+        interimScore = 0;
         results();
     },
     pause() {
