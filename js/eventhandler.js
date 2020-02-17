@@ -22,11 +22,13 @@ const events = {
         finnishedSongs += 1;
         interimScore = 0;
         totalScore += data.score;
+        results();
     },
     failed(data) {
         failedSongs += 1;
         interimScore = 0;
         totalScore += data.score;
+        results();
     },
     menu() {
         ui.menue();

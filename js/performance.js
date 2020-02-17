@@ -32,6 +32,7 @@ const performance = (() => {
 
     function clear() {
         interimScore = 0;
+        maxCombo = 0;
         combo.innerHTML = "0";
         combo.innerHTML = "0"
         score.innerHTML = "0";

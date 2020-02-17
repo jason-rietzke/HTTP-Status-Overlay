@@ -24,6 +24,7 @@ function connect() {
     socket.addEventListener("close", () => {
         console.log("Failed " + i + " times to connect to server, retrying in 3 seconds");
         ui.pause();
+        paused = true;
         i++;
         setTimeout(connect, 3000);
     });
