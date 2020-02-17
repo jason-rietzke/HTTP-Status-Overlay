@@ -70,6 +70,10 @@ const beatmap = (() => {
                 
                 var now = new Date().getTime();
                 var distance = (now - start) - pauseTime;
+
+                if (distance >= data.length) {
+                    pause = true;
+                }
                 
                 var min = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
                 var sec = Math.floor(distance % (1000 * 60) / 1000);
