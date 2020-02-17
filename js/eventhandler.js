@@ -20,18 +20,19 @@ const events = {
     },
     finished(data) {
         finnishedSongs += 1;
+        totalScore += interimScore;
         interimScore = 0;
-        totalScore += data.score;
         results();
     },
     failed(data) {
         failedSongs += 1;
+        totalScore += interimScore;
         interimScore = 0;
-        totalScore += data.score;
         results();
     },
     menu() {
         ui.menue();
+        totalScore += interimScore;
         interimScore = 0;
         results();
     },
