@@ -19,7 +19,7 @@ const events = {
         pauseTime = 0;
     },
     finished(data) {
-        finnishedSongs += 1;
+        finishedSongs += 1;
         totalScore += interimScore;
         interimScore = 0;
         results();

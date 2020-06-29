@@ -1,6 +1,6 @@
 var totalScore = 0;
 var interimScore = 0;
-var finnishedSongs = 0;
+var finishedSongs = 0;
 var failedSongs = 0;
 
 var noteCuts = 0;
@@ -25,7 +25,7 @@ const results = (() => {
         misses.innerHTML = format(noteMisses);
         combo.innerHTML = format(noteMaxCombo);
         score.innerHTML = format(totalScore + interimScore);
-        complete.innerHTML = format(finnishedSongs);
+        complete.innerHTML = format(finishedSongs);
         uncomplete.innerHTML = format(failedSongs);
     }
 
